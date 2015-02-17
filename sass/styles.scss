@@ -49,7 +49,8 @@
 	}
 	.canvas{
 		width: 50%;
-		padding-top: 10px;
+		margin-top: 5%;
+		padding-top: 30px;
 		padding-left: 10px;
 		padding-right: 10px;
 		margin-left: 25%;
@@ -63,6 +64,7 @@
     	overflow-y:scroll;
     	overflow-x:hidden;
 		height: auto;
+		margin-top: 30px;
 		width: 100%;
 		margin-bottom: 10px;
 		overflow-y: scroll;
@@ -149,11 +151,15 @@ section{
 		width: 40%;
 		margin-top: 20px;
 	}
+	h1{
+		margin : auto;
+		text-align: center;
+	}
 	p, h1{
 		width: 80%;
 		padding: 0;
 		margin: 0;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Muli', sans-serif;
 		margin: auto;
 		color: $white;
 		display: block;
@@ -171,14 +177,16 @@ section{
 		color: $white;
 	}
 	width: 88%;
-	padding: 30px 6% 30px 6%;	
-	font-size: 11px;
+	padding: 30px 6% 50px 6%;	
 	text-align: center;
-	font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+	font-family: 'Alegreya Sans SC', sans-serif;
 	background-color: rgba($black, 0.6);
 	// @extend .shadow;
 	z-index: 40;
 	top: 0;
+	.nav{
+		padding: 10px;
+	}
 	&.resized{
 		padding: 10px 6%;
 		position: fixed;
@@ -186,17 +194,17 @@ section{
 	h1{
 		display: block;
 		float: left;
-		font-size: 13px;
+		font-size: 30px;
 		vertical-align: middle;
 	}
 	a{
 		vertical-align: middle;
 		text-decoration: none;
-		padding: 10px;
+		padding: 20px;
 		text-transform:uppercase;
 		transition:all.5s ease;
 		&:hover, &.selected{
-			background-color: rgba($black, 0.6);
+			background-color: rgba($black, 1);
 		}
 	}
 	.nav{
@@ -236,6 +244,7 @@ footer{
 	border-radius:4px;
 	background-color: rgba($black, 0.6);
 	@extend .shadow;
+	font-family: 'Alegreya Sans SC', sans-serif;
 	.tag-group{
 		list-style:none;
   		padding:0;
@@ -265,7 +274,7 @@ footer{
 		h1{
 			display: block;
 			text-align: center;
-			font-family: 'Titillium Web', sans-serif;
+			font-family: 'Alegreya Sans SC', sans-serif;;
 			font-width: 300;
 			margin: 40px 0 40px;
 			color: $white;
@@ -308,6 +317,9 @@ footer{
 		}
 		label.active {
 		  transform:translateY(50px);
+		  -webkit-transform: translateY(50px);
+		  -moz-transform:translateY(50px);
+		  -ms-transform:translateY(50px);
 		  left:2px;
 		  font-size:14px;
 		}
