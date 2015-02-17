@@ -4,3 +4,357 @@
 @import "variables";
 @import "mixins";
 @import "base";
+@import "columns";
+@import "button";
+@import "registration";
+@import "markdown";
+@import "slider";
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -100;
+
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+  background-image: url('http://cdn.desktopwallpapers4.me/wallpapers/world/1680x1050/2/15867-dark-city-street-1680x1050-world-wallpaper.jpg');
+  width: 100%;
+  height: 100%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.modal{
+	.background{
+		-webkit-filter: blur(10px); 
+		-moz-filter: blur(10px); 
+		-o-filter: blur(10px); 
+		-ms-filter: blur(10px); 
+		filter: blur(10px);
+		background-image: url('http://cdn.desktopwallpapers4.me/wallpapers/world/1680x1050/2/15867-dark-city-street-1680x1050-world-wallpaper.jpg');
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index: 50;
+	}
+	.canvas{
+		width: 50%;
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 25%;
+		z-index: 51;
+		position: fixed;
+		background-color: rgba($white, 0.5);
+	}
+	.content{
+		top: 0;
+    	bottom:0;
+    	overflow-y:scroll;
+    	overflow-x:hidden;
+		height: auto;
+		width: 100%;
+		margin-bottom: 10px;
+		overflow-y: scroll;
+		overflow-x: field-wrap; 
+	}
+	.button{
+		width: 50%;
+		margin : auto;
+	}
+}
+
+.frame{
+	height: 300px;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	img, video{
+		max-width: 80%;
+		max-height: 80%;
+		display: inline-block;
+	}
+	.pagation{
+		text-align: center;
+		.dot{
+			display: inline-block;
+			margin: 10px;
+			border-radius: 10px;
+			height: 10px;
+			width: 10px;
+		}
+		.active_slider{
+			background-color: #E0645C;
+		}
+		.inactive_slider{
+			background-color: #444444;
+		}
+	}
+	.controls{
+		margin: auto;
+		text-align: center;
+		.button{
+			margin: 0;
+			display: inline-block;
+			width : auto;
+		}
+	}
+
+}
+body{
+	background-color: $white;
+}
+h1{
+	font-size: 40px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+.button{
+	font-size: 20px;
+}
+hr{
+	@extend .hr
+}
+section{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	// &#Introduction{
+	// 	min-height: 455px;
+	// }
+}
+#Introduction{
+	display: inline-block;
+	.left{
+		float: left;
+		margin-left: 10%;
+		width: 40%;
+		margin-top: 20px;
+	}
+	.right{
+		float: right;
+		margin-right: 10%;
+		width: 40%;
+		margin-top: 20px;
+	}
+	p, h1{
+		width: 80%;
+		padding: 0;
+		margin: 0;
+		font-family: 'Source Sans Pro', sans-serif;
+		margin: auto;
+		color: $white;
+		display: block;
+		-webkit-margin-before: 1em;
+		-webkit-margin-after: 1em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		vertical-align: middle;
+		line-height: 150%;
+	}
+}
+
+.header{
+	h1, p, a, li, div, span{
+		color: $white;
+	}
+	width: 88%;
+	padding: 30px 6% 30px 6%;	
+	font-size: 11px;
+	text-align: center;
+	font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+	background-color: rgba($black, 0.6);
+	// @extend .shadow;
+	z-index: 40;
+	top: 0;
+	&.resized{
+		padding: 10px 6%;
+		position: fixed;
+	}
+	h1{
+		display: block;
+		float: left;
+		font-size: 13px;
+		vertical-align: middle;
+	}
+	a{
+		vertical-align: middle;
+		text-decoration: none;
+		padding: 10px;
+		text-transform:uppercase;
+		transition:all.5s ease;
+		&:hover, &.selected{
+			background-color: rgba($black, 0.6);
+		}
+	}
+	.nav{
+		float: right;
+		ul, li{
+			display: inline;
+		}
+	}
+}
+
+
+footer{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: rgba($white, 0.4);
+	p{
+		text-align: center;
+		vertical-align: center;
+		text-shadow: 2px 2px 2px #888888;
+		a {
+			font-size: 20px;
+			margin-left: 10px;
+			margin-right: 10px;
+			color: $blue2;
+			font-size: 40px;
+		}
+	}
+}
+
+.form{
+	padding: 40px;
+	max-width:600px;
+	width: 50%;
+	margin:40px auto;
+	border-radius:4px;
+	background-color: rgba($black, 0.6);
+	@extend .shadow;
+	.tag-group{
+		list-style:none;
+  		padding:0;
+  		margin:0 0 30px 0;
+  		width: 100%;
+  		div{
+  			display: block;
+	  		width: 50%;
+  			float: left;
+	  		transition:.5s ease;
+	  		background-color: $blue3;
+	  		text-align: center;
+	  		padding: 10px 0;
+  			a{
+  				font-size: 20px;
+	  			color: $white;
+  			}
+  			&:hover, &:focus{
+				background-color: rgba($blue4, 0.4);
+			}
+  		}
+	}
+	.tag-content{
+		display: block;
+		margin-top: 30px;
+		padding-top: 20px;
+		h1{
+			display: block;
+			text-align: center;
+			font-family: 'Titillium Web', sans-serif;
+			font-width: 300;
+			margin: 40px 0 40px;
+			color: $white;
+		}
+		.field-wrap {
+		  position:relative;
+		  margin-bottom:40px;
+			input{
+			  font-size:22px;
+			  display:block;
+			  width:100%;
+			  height:100%;
+			  padding:5px 10px;
+			  background:none;
+			  background-image:none;
+			  border:1px solid $blue3;
+			  color:$white;
+			  border-radius:0;
+			  transition:border-color .25s ease, box-shadow .25s ease;
+			  &:focus {
+					outline:0;
+					border-color:$white;
+			  }
+			}
+		}
+		label{
+			padding: 5px;
+			font-family: 'Titillium Web', sans-serif;
+			position:absolute;
+			-webkit-transform:translateY(6px);
+			-moz-transform:translateY(6px);
+			-ms-transform:translateY(6px);
+			transform:translateY(6px);
+			left:13px;
+			color:rgba($white,.5);
+			transition:all 0.25s ease;
+			-webkit-backface-visibility: hidden;
+			pointer-events: none;
+			font-size:22px;
+		}
+		label.active {
+		  transform:translateY(50px);
+		  left:2px;
+		  font-size:14px;
+		}
+
+		.button{
+			padding: 10px 0;
+			width: 70%;
+			margin: 5px auto;
+			font-size: 20px;
+	  		color: $white;
+		}
+	}
+}
+
+#Examples{
+	height: auto;
+	.editor{
+		width: 100%;
+		overflow-y: scroll;
+		margin: auto;
+		height: 400px;
+		z-index: 1;
+		-webkit-transition: all .5s ease-in-out;
+	    -moz-transition: wall .5s ease-in-out;
+	    -o-transition: all .5s ease-in-out;
+	    transition: all .5s ease-in-out;
+	    text-align: left;
+	    border-radius: 0 0 50px 50px;
+		.editable{
+			width: 45%;
+			height: 90%;
+			margin: auto;
+			margin-bottom: 10px;
+			text-align: left;
+			@extend .shadow;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			background-color: rgba($white, 0.4);
+		}
+	}
+	.button{
+			width: 30%;
+			margin: auto;
+	}
+
+}
+
+

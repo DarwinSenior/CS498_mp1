@@ -1,13 +1,64 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
-
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
-}
+@import "variables";
 
 .test {
   font-size: 1.2rem;
   color: $blue;
+}
+
+a {
+	text-decoration: none;
+}
+
+.redbg{
+	background-color: $bgred;
+}
+.bluebg{
+	background-color: $bgblue;
+}
+.greenbg{
+	background-color: $bggreen;
+}
+.azurebg{
+	background-color: $bgazure;
+}
+.yellowbg{
+	background-color: $bgyellow;
+}
+.content{
+	display: block;
+	margin: 0;
+	padding : $basePadding;
+	min-height: 500px;
+	height: auto;
+	.vertical-wrapper{
+		display: table;
+	  	float: left;
+	  	.vertical-middle{ 
+		    height: 100%;
+		    width: 100%;
+		    vertical-align: middle;
+		    display: table-cell;
+		}
+	}
+}
+
+.cursor{
+	background-color: $white;
+	color: $white;
+}
+
+.hr{
+	border: 0;
+    height: 3px;
+    background-image: -webkit-linear-gradient(left, rgba($white,0), rgba($white,0.75), rgba($white,0)); 
+    background-image:    -moz-linear-gradient(left, rgba($white,0), rgba($white,0.75), rgba($white,0)); 
+    background-image:     -ms-linear-gradient(left, rgba($white,0), rgba($white,0.75), rgba($white,0)); 
+    background-image:      -o-linear-gradient(left, rgba($white,0), rgba($white,0.75), rgba($white,0)); 
+}
+
+.shadow{
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.1), 3px 3px 5px rgba(0,0,0,0.1);
 }

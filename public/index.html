@@ -1,18 +1,140 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MP1 Starter</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>MP1 Starter</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
+	<div class="background-image"></div>
+	<div class="modal" id="Tryitout">
+		<div class="background"></div>
+		<div class="canvas">
+			<button class="button red" id="close-modal">OK</button>
+			<div id="markdown-html" class="content markdown"></div>
+		</div>
+	</div>
+	<div class="header">
+		<h1>Welcome To MP1</h1>
+		<navbar class="nav">
+			<ul>
+				<li><a href="#Introduction">Introduction</a></li>
+				<li><a href="#Video">Video and Pictures</a></li>
+				<li><a href="#Examples">Examples</a></li>
+				<li><a href="#RegistrationLogin">Registration/Login</a></li>
+			</ul>
+		</navbar>
+	</div>
+	<section id="Introduction">
+		<h1>Introduction</h1>
+		<div class="left">
+			<p class="typewriter">
+				This page is the demostration for MP1. I am not sure what application I am going to achieve in the very end. However, I have a vague idea what it could do. I really like Markdown, and I might want to do an application based on that in the final project. I wish to integrate features including google drive and the biggest feature might be run script alive inside your markdown page. <br>
+				
+			</p>
+		</div>
+		<div class="right">
+			<p>
+				So, there are some sections below to demostrate the what I am going to do for the first MP. <br>
+				The first thing is the Videos and Pictures, and it would be the slide show style. It is for demostration perpose. <br>
+				The second thing is the second view is the examples of what I want to achieve might be in the very end. It is the demostration of what the editor would be <br>
+				Then, there is the registration section. For future use probably.
+			</p>
+		</div>
+	</section>
+	<hr>
+	<section id="Video">
+		<div class="frame">
+			<img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage4.jpg" id="slider0">
+			<img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage5.jpg" id="slider1">
+			<img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage6.jpg" id="slider2">
+			<img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage7.jpg" id="slider3">
+			<video autoplay="" loop="" src="http://dza2cofcvk264.cloudfront.net/vid/home.mp4" id="slider4"></video>
+			<div class="pagation">
+				<div class="dot" id="aslider0"></div>
+				<div class="dot" id="aslider1"></div>
+				<div class="dot" id="aslider2"></div>
+				<div class="dot" id="aslider3"></div>
+				<div class="dot" id="aslider4"></div>
+			</div>
+			<div class="controls">
+				<button class="button blue" id="beforeslider"><i class="fa fa-chevron-left"></i></button>
+				<button class="button blue" id="nextslider"><i class="fa fa-chevron-right"></i></button>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section id="Examples">
+		<div class="editor">
+			<pre class="editable" id="editor">
+I hope this web page is clear enough.
 
+---
 
-  <script src="lib/jquery-2.1.3.min/index.js"></script>
-  <script src="js/script.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
++ The first introduction is the example of multi-colomn. 
++ The second videos and pictures are the slider effect with video tag usage.
++ This editable colomn gives us some ways of modal. 
+</pre>
+		</div>
+		<button id="open-modal" class="button red">See result</button>
+	</section>
+	<hr>
+	<section id="RegistrationLogin">
+		<div class="form">
+			<div class="tag-group" id="tab-rl">
+				<div class="blue"><a href="#signup">SIGN UP</a></div>
+				<div class="blue"><a href="#login">LOGIN</a></div>
+			</div>
+			<div class="tag-content">
+				<div id="signup">
+					<h1>Sign Up For Free</h1>
+					<div class="field-wrap">
+						<label><i class="fa fa-envelope-o"></i> Email Adress</label>
+						<input type="text">
+					</div>
+					<div class="field-wrap">
+						<label><i class="fa fa-user"></i> UserName</label>
+						<input type="text">
+					</div>
+					<div class="field-wrap">
+						<label><i class="fa fa-lock"></i> Password</label>
+						<input type="password">
+					</div>
+					<div class="button blue">Register</div>
+					<hr>
+					<div class="button red">Sign in with <i class="fa fa-google-plus"></i></div>
+					<div class="button red">Sign in with <i class="fa fa-github"></i></div>
+				</div>
+				<div id="login">
+					<h1>Welcome Back!</h1>
+					<div class="field-wrap">
+						<label><i class="fa fa-user"></i> UserName</label>
+						<input type="text">
+					</div>
+					<div class="field-wrap">
+						<label><i class="fa fa-lock"></i> Password</label>
+						<input type="password">
+					</div>
+					<div class="button blue">Log in</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<footer>
+		<p>
+			<a href="#"><i class="fa fa-github"></i></a>
+			<a href="#"><i class="fa fa-envelope-o"></i></a>
+			<a href="#"><i class="fa fa-google-plus"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+		</p>
+	</footer>
+	<script src="lib/ace-builds/src-min/ace.js"></script>
+	<script src="lib/marked/marked.min.js"></script>
+	<script src="lib/jquery-2.1.3.min/index.js"></script>
+	<script src="js/script.js"></script>
+	<script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
